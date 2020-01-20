@@ -1,6 +1,6 @@
 // const extname = require('path').extname
 const createFilter = require("rollup-pluginutils").createFilter;
-const babel = require("babel-core");
+const babel = require("@babel/core");
 const intlPrecompiler = require("babel-plugin-precompile-intl");
 
 /**
