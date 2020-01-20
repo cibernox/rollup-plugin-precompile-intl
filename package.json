@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-precompile-intl",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Compile translations in ICU message format to invocable functions at build time",
   "repository": "https://github.com/cibernox/rollup-plugin-precompile-intl",
   "author": {
