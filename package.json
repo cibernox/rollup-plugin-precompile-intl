@@ -1,0 +1,32 @@
+{
+  "name": "rollup-plugin-precompile-intl",
+  "version": "0.0.1",
+  "description": "Compile translations in ICU message format to invocable functions at build time",
+  "repository": "https://github.com/cibernox/rollup-plugin-precompile-intl",
+  "author": {
+    "name": "Miguel Camba",
+    "email": "miguel.camba@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "jest test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "dependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/helper-plugin-utils": "^7.8.3",
+    "babel-plugin-precompile-intl": "^0.0.1",
+    "rollup-pluginutils": "^2.8.2"
+  },
+  "keywords": [
+    "rollup-plugin",
+    "intl",
+    "precompile",
+    "translations",
+    "i18n"
+  ]
+}
