@@ -8,7 +8,7 @@ const intlPrecompiler = require("babel-plugin-precompile-intl");
  * @param options.include
  * @param options.exclude
  */
-export default function(options = {}) {
+module.exports = function(options = {}) {
   const filter = createFilter(options.include, options.exclude);
 
   return {
