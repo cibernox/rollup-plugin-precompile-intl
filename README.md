@@ -58,7 +58,8 @@ footprint, often < 2kb.
 
 ### Setup
 
-1. Install `rollup-plugin-precompile-intl` and `precompile-intl-runtime`
+1. Install `rollup-plugin-precompile-intl` and `precompile-intl-runtime` as devDependencies.
+
 2. Create a folder to put your translations. I like to use a `/messages` folder on the root. On that folder, create `en.js`, `es.js` and as many files
    as languages you want. On each file, export an object with your translations:
    ```js
@@ -68,7 +69,8 @@ footprint, often < 2kb.
       "foot": "{count} {count, plural, =1 {foot} other {feet}}",
     }
    ```
-3. In your `rollup.config.js` add the plugin exported by this addon, and let it know what folder your translations live in:
+
+3. In your `rollup.config.js` add the plugin exported by `rollup-plugin-precompile-intl`, and let it know what folder your translations live in:
 ```diff
   import svelte from 'rollup-plugin-svelte';
   import resolve from '@rollup/plugin-node-resolve';
@@ -104,6 +106,11 @@ footprint, often < 2kb.
     }
   ]
 ```
+
+*From this step onward the library almost identical to use and configure to the popular [svelte-i18n](https://github.com/kaisermann/svelte-i18n)*.
+It has the same features and only some import path is different. You can check the docs of [svelte-i18n](https://github.com/kaisermann/svelte-i18n)
+for examples and details in the configuration options.
+
 4. Create an initializer where you can register your locales and configure your preferences. You can import
 your languages statically (which will add them to your bundle) or register loaders that will load the translations
 asynchronously.
@@ -131,7 +138,8 @@ init({
 </footer>
 ```
 
-7. If you want translations to work in node (for instance when running jest unit tests) you will need to
+### Testing
+If you want translations to work in node (for instance when running jest unit tests) you will need to
 install babel and configure it on the `babel.config.js`
 ```js
 module.exports = {
